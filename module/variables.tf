@@ -6,7 +6,6 @@ variable "create" {
 variable "bucket" {
   description = "The name of the bucket to put the file in. Alternatively, an S3 access point ARN can be specified."
   type        = string
-  default     = ""
 }
 
 variable "key" {
