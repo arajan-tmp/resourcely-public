@@ -12,6 +12,7 @@ variable "key" {
   description = "The name of the object once it is in the bucket."
   type        = string
   default     = ""
+  advanced    = true
 }
 
 variable "defaults" {
