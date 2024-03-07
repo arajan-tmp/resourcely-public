@@ -54,3 +54,22 @@ resource "aws_s3_bucket_lifecycle_configuration" "resourcely-test_m9x6jDJtmwyscV
     }
   }
 }
+
+resource "azurerm_resource_group" "asd_2xdM4g7xhTBbTqVM" {
+  name     = "asd"
+  location = "Australia Southeast"
+}
+
+resource "azurerm_storage_account" "asd_2xdM4g7xhTBbTqVM" {
+  name                     = "asd"
+  resource_group_name      = azurerm_resource_group.asd_2xdM4g7xhTBbTqVM.name
+  location                 = azurerm_resource_group.asd_2xdM4g7xhTBbTqVM.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_container" "asd_2xdM4g7xhTBbTqVM" {
+  name                  = "asd"
+  storage_account_name  = azurerm_storage_account.asd_2xdM4g7xhTBbTqVM.name
+  container_access_type = "container"
+}
